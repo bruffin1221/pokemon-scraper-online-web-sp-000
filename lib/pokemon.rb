@@ -19,12 +19,8 @@ def self.save(name, type, db)
 #   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
  end
 
- def self.find(name, type)
-  sql=<<-SQL
-  INSERT INTO * FROM pokemon
-  WHERE name 
-
-  SQL
+ def self.find(id, db)
+  db.execute=("SELECT * FROM pokemon")
  end
 
 
