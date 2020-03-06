@@ -19,14 +19,14 @@ def self.save(name, type, db)
 #   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
  end
 
- def self.find(name)
+ def self.find(name, type)
        sql = <<-SQL
          SELECT * FROM songs
-         WHERE name=?
+         WHERE name=?, type=?
          LIMIT 1
        SQL
 
-       DB[:conn].execute(sql, name).map do |row|
+       DB[:conn].execute(sql, name, type).map do |row|
          self.new_from_db(row)
        end
      end
