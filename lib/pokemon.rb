@@ -29,7 +29,7 @@ def self.save(name, type, db)
          self.new_from_db(row)
        end
      end
+
+
+
   end
-
-
-end
