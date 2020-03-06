@@ -14,7 +14,7 @@ def self.save(name, type, db)
 
  def self.find(id, db)
   found_pokemon=db.execute("SELECT * FROM pokemon WHERE id= ?;", [id]).flatten
-  binding.pry
+  found_pokemon[1]
  end
 
 
