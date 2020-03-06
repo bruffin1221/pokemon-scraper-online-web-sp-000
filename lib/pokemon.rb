@@ -22,7 +22,7 @@ def self.save(name, type, db)
  def self.find(name, type)
   sql=<<-SQL
   INSERT INTO * FROM pokemon
-  WHERE id 
+  WHERE name 
 
   SQL
  end
