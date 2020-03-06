@@ -19,9 +19,9 @@ def self.save(name, type, db)
 #   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
  end
 
- def self.find(name, type)
+ def self.find
 
- end 
+ end
 
 
 
