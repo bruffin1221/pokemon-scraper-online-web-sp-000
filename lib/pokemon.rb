@@ -20,7 +20,10 @@ def self.save(name, type, db)
  end
 
  def self.find(name, type)
+  sql=<<-SQL
+  INSERT INTO * FROM pokemon
 
+  SQL
  end
 
 
