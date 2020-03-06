@@ -13,8 +13,8 @@ def self.save(name, type, db)
  end
 
  def self.find(id, db)
-  found_pokemon=db.execute("SELECT * FROM pokemon WHERE id= ?;", [id]).flatten
-  found_pokemon[1]
+  new_pokemon=db.execute("SELECT * FROM pokemon WHERE id= ?;", [id]).flatten
+  pokemon_object.new(id:new_pokemon[0], name: new_pokemon[1], type: new_pokemon[2], db: db)
  end
 
 
