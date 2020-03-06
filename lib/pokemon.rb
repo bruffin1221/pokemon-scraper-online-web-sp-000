@@ -20,16 +20,8 @@ def self.save(name, type, db)
  end
 
  def self.find(name, type)
-       sql = <<-SQL
-         SELECT * FROM songs
-         WHERE name=?, type=?
-         LIMIT 1
-       SQL
 
-       db[:conn].execute(sql, name, type).map do |row|
-         self.new_from_db(row)
-       end
-     end
+ end 
 
 
 
