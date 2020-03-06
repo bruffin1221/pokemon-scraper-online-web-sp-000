@@ -10,17 +10,10 @@ end
 
 def self.save(name, type, db)
   db.execute("INSERT INTO pokemon (name, type) VALUES ( ?, ? )", [name, type])
-  #sql = <<-SQL
-#  INSERT INTO songs (name, type, db)
-  #VALUES (?, ?, ?), [name, type, db]
-#   SQL
-
-#   DB[:conn].execute(sql, self.name, self.type, self.db)
-#   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
  end
 
  def self.find(id, db)
-  db.execute("SELECT * FROM pokemon WHERE id= ?;", [id])
+  found_pokemon=db.execute("SELECT * FROM pokemon WHERE id= ?;", [id])
   binding.pry
  end
 
